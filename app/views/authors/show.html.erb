@@ -1,0 +1,18 @@
+<p>
+  <b>Name:</b>
+  <%=h @author.name %>
+</p>
+
+<p>
+  <b>Password hash:</b>
+  <%=h @author.password_hash %>
+</p>
+
+<p>
+  <b>Created at:</b>
+  <%=h @author.created_at %>
+</p>
+
+
+<%= link_to 'Edit', edit_author_path(@author) %> |
+<%= link_to 'Back', authors_path %>
