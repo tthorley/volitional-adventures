@@ -1,0 +1,34 @@
+<h1>Listing pages</h1>
+
+<table>
+  <tr>
+    <th>Directing question</th>
+    <th>Content</th>
+    <th>Author</th>
+    <th>Book</th>
+    <th>Page</th>
+    <th>Published</th>
+    <th>Created at</th>
+    <th>Modified at</th>
+  </tr>
+
+<% @pages.each do |page| %>
+  <tr>
+    <td><%=h page.directing_question %></td>
+    <td><%=h page.content %></td>
+    <td><%=h page.author_id %></td>
+    <td><%=h page.book_id %></td>
+    <td><%=h page.page_id %></td>
+    <td><%=h page.published %></td>
+    <td><%=h page.created_at %></td>
+    <td><%=h page.modified_at %></td>
+    <td><%= link_to 'Show', page %></td>
+    <td><%= link_to 'Edit', edit_page_path(page) %></td>
+    <td><%= link_to 'Destroy', page, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New page', new_page_path %>

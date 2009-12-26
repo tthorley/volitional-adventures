@@ -1,0 +1,44 @@
+<h1>Editing page</h1>
+
+<% form_for(@page) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :directing_question %><br />
+    <%= f.text_field :directing_question %>
+  </p>
+  <p>
+    <%= f.label :content %><br />
+    <%= f.text_area :content %>
+  </p>
+  <p>
+    <%= f.label :author_id %><br />
+    <%= f.text_field :author_id %>
+  </p>
+  <p>
+    <%= f.label :book_id %><br />
+    <%= f.text_field :book_id %>
+  </p>
+  <p>
+    <%= f.label :page_id %><br />
+    <%= f.text_field :page_id %>
+  </p>
+  <p>
+    <%= f.label :published %><br />
+    <%= f.check_box :published %>
+  </p>
+  <p>
+    <%= f.label :created_at %><br />
+    <%= f.datetime_select :created_at %>
+  </p>
+  <p>
+    <%= f.label :modified_at %><br />
+    <%= f.datetime_select :modified_at %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @page %> |
+<%= link_to 'Back', pages_path %>

@@ -1,0 +1,43 @@
+<p>
+  <b>Directing question:</b>
+  <%=h @page.directing_question %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%=h @page.content %>
+</p>
+
+<p>
+  <b>Author:</b>
+  <%=h @page.author_id %>
+</p>
+
+<p>
+  <b>Book:</b>
+  <%=h @page.book_id %>
+</p>
+
+<p>
+  <b>Page:</b>
+  <%=h @page.page_id %>
+</p>
+
+<p>
+  <b>Published:</b>
+  <%=h @page.published %>
+</p>
+
+<p>
+  <b>Created at:</b>
+  <%=h @page.created_at %>
+</p>
+
+<p>
+  <b>Modified at:</b>
+  <%=h @page.modified_at %>
+</p>
+
+
+<%= link_to 'Edit', edit_page_path(@page) %> |
+<%= link_to 'Back', pages_path %>
