@@ -1,9 +1,8 @@
 class CreateAuthors < ActiveRecord::Migration
   def self.up
     create_table :authors do |t|
-      t.string :name
-      t.string :password_hash
-      t.datetime :created_at
+      t.string :name, :limit => 64
+      t.string :password_hash, :limit => 64
 
       t.timestamps
     end

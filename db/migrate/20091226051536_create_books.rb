@@ -1,7 +1,7 @@
 class CreateBooks < ActiveRecord::Migration
   def self.up
     create_table :books do |t|
-      t.string :title
+      t.string :title, :limit => 64
       t.text :description
 
       t.timestamps

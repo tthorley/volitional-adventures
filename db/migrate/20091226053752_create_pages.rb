@@ -6,9 +6,8 @@ class CreatePages < ActiveRecord::Migration
       t.integer :author_id
       t.integer :book_id
       t.integer :page_id
+      t.integer :page_number
       t.boolean :published
-      t.datetime :created_at
-      t.datetime :modified_at
 
       t.timestamps
     end
