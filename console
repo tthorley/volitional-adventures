@@ -1,62 +1,0 @@
-Script started on Sat Dec 26 20:18:17 2009
-]1;olitional-adventures]2;[zsh]   seven::/Users/tad/Dropbox/volitional-adventures[36mTime: 20:18  up 12:13, 2 users, load averages: 0.28 0.29 0.44 [0m
-[36mseven[0m::[36m/Users/tad/Dropbox/volitional-adventures[0m
-[36mInitializing zsh version number 4.3.4 [0m
-Identity added: /Users/tad/.ssh/id_rsa (/Users/tad/.ssh/id_rsa)
-]1;olitional-adventures[1m[7m%[27m[1m[0m                                                                                               [0m[27m[24m[J[22;36mtad@[22;31mseven[22;32m (master)[00m: [K[33C[/Users/tad/Dropbox/volitional-adventures][75Dsscript /console 
-]1;  script/console Loading development environment (Rails 2.3.5)
->> Authore[K
-=> Author(id: integer, name: string, password_hash: string, created_at: datetime, updated_at: datetime, password_salt: string)
->> (0...8).map{65.+(rand(25)).chr}.join
-=> "VOAPSHDK"
->> (0...8).map{65.+(rand(25)).chr}.join
-=> "XNLFFGCB"
->> (0...8).map{65.+(rand(25)).chr}.join
-=> "ABYDRDJB"
->> (0...8).map{65.+(rand(25)).chr}.join
-=> "YHSYCJNI"
->> (0...8).map{65.+(rand(25)).chr}.join
-=> "JTRIPUEF"
->> (0...8).map{65.+(rand(25)).chr}.join
-=> "BWUBTDVU"
->> (0...50).map{ ('a'..'z').to_a[rand(26)] }.join
-=> "ionqtaajpuyrrejhokmvrjpbnwvxvzfnyvsgolfobqqntuuoav"
->> exit
-]1;olitional-adventures[1m[7m%[27m[1m[0m                                                                                               [0m[27m[24m[J[22;36mtad@[22;31mseven[22;32m (master)[00m: [K[33C[/Users/tad/Dropbox/volitional-adventures][75Dggit st
-]1;  git st # On branch master
-# Changed but not updated:
-#   (use "git add <file>..." to update what will be committed)
-#   (use "git checkout -- <file>..." to discard changes in working directory)
-#
-#	modified:   app/models/author.rb
-#	modified:   app/models/book.rb
-#	modified:   config/environment.rb
-#	modified:   db/schema.rb
-#	modified:   log/development.log
-#
-# Untracked files:
-#   (use "git add <file>..." to include in what will be committed)
-#
-#	console
-#	db/migrate/20091227031316_add_password_salt.rb
-no changes added to commit (use "git add" and/or "git commit -a")
-]1;olitional-adventures[1m[7m%[27m[1m[0m                                                                                               [0m[27m[24m[J[22;36mtad@[22;31mseven[22;32m (master)[00m: [K[33C[/Users/tad/Dropbox/volitional-adventures][75Dggit add     g  ggit st
-]1;  git st # On branch master
-# Changed but not updated:
-#   (use "git add <file>..." to update what will be committed)
-#   (use "git checkout -- <file>..." to discard changes in working directory)
-#
-#	modified:   .gitignore
-#	modified:   app/models/author.rb
-#	modified:   app/models/book.rb
-#	modified:   config/environment.rb
-#	modified:   db/schema.rb
-#	modified:   log/development.log
-#
-# Untracked files:
-#   (use "git add <file>..." to include in what will be committed)
-#
-#	console
-#	db/migrate/20091227031316_add_password_salt.rb
-no changes added to commit (use "git add" and/or "git commit -a")
-]1;olitional-adventures[1m[7m%[27m[1m[0m                                                                                               [0m[27m[24m[J[22;36mtad@[22;31mseven[22;32m (master)[00m: [K[33C[/Users/tad/Dropbox/volitional-adventures][75D
