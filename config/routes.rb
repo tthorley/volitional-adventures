@@ -1,9 +1,11 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :pages
+  map.resources :authors do |authors|
+    authors.resources :pages
+  end
 
-  map.resources :authors
-
-  map.resources :books
+  map.resources :books do |books|
+    books.resources :pages
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
 
