@@ -9,13 +9,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091226053752) do
+ActiveRecord::Schema.define(:version => 20091227031316) do
 
   create_table "authors", :force => true do |t|
     t.string   "name",          :limit => 64
     t.string   "password_hash", :limit => 64
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "password_salt", :limit => 8
   end
 
   create_table "books", :force => true do |t|
