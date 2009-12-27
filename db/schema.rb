@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091227031316) do
+ActiveRecord::Schema.define(:version => 20091227175224) do
 
   create_table "authors", :force => true do |t|
     t.string   "name",          :limit => 64
@@ -20,10 +20,11 @@ ActiveRecord::Schema.define(:version => 20091227031316) do
   end
 
   create_table "books", :force => true do |t|
-    t.string   "title",       :limit => 64
+    t.string   "title",         :limit => 64
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "urlized_title", :limit => 64
   end
 
   create_table "pages", :force => true do |t|
