@@ -3,10 +3,10 @@ ActionController::Routing::Routes.draw do |map|
     authors.resources :pages
   end
 
-  map.resources :books do |books|
-    books.resources :pages
-  end
-
+  map.connect 'book/:urlized_title/page/:page_number',
+    :controller => 'pages',
+    :action => 'read'
+    
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:

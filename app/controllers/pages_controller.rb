@@ -1,4 +1,11 @@
 class PagesController < ApplicationController
+  
+  def read
+    @book = Book.find_by_urlized_title(params[:urlized_title])
+    @page = @book.pages.find_by_page_number(params[:page_number])
+    
+  end
+  
   # GET /pages
   # GET /pages.xml
   def index
