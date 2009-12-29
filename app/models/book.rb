@@ -1,16 +1,15 @@
 class Book < ActiveRecord::Base
   has_many :pages
-
-  def title=(string)
-    self.title = string
-    self.urlized_title = Book.urlize_title(string)
+  
+  before_save :urlize_title
+  
+  def to_param
+    self.urlized_title
   end
   
-  def urlized_title=
-    raise "Set with the title= method"
-  end
+  private
   
-  def Book.urlize_title(string)
-    string.downcase.gsub(/[^a-z]/, "-").squeeze("-")    
+  def urlize_title(string)
+    self.urlized_title = self.title.downcase.gsub(/[^a-z]/, "-").squeeze("-") 
   end
 end
