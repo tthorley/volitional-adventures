@@ -9,7 +9,7 @@ class Book < ActiveRecord::Base
   
   private
   
-  def urlize_title(string)
+  def urlize_title
     self.urlized_title = self.title.downcase.gsub(/[^a-z]/, "-").squeeze("-") 
   end
 end
