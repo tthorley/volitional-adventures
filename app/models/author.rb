@@ -1,30 +1,31 @@
 require 'digest/sha2'
 
 class Author < ActiveRecord::Base
+  attr_accessor :password
+  
   has_many :pages
 
-  def password=(pass)
-    salt = (0...8).map{65.+(rand(25)).chr}.join
-    self.password_salt = salt
-    self.password_hash = Author.hashify(:salt => salt, :password => pass) 
-  end
+  before_save :encrypt_password
   
-  def password
-    raise "password stored as a hash"
-  end
-  
-  def Author.hashify(options)
-    salt = options[:salt] || ""
-    pass = options[:password] || ""
-    Digest::SHA256.hexdigest(pass+salt)
+  def password_match?(password)
+    self.password_hash == Author.hashify(:salt => self.password_salt, :password => password) ? true : false
   end
   
   def Author.authenticate(name, password)
     author = Author.find_by_name(name)
-    if author && Author.hashify(:salt => author.password_salt, :password => password) == author.password_hash
-      author
-    else
-      nil
-    end
+    author && author.password_match?(password) ? author : nil
+  end
+  
+  def Author.hashify(options)
+    options[:salt] ||= ""
+    options[:password] ||= ""
+    Digest::SHA256.hexdigest(options[:password] + options[:salt])
+  end
+    
+  private
+  
+  def encrypt_password
+    self.password_salt = (0...8).map{65.+(rand(25)).chr}.join
+    self.password_hash = Author.hashify(:salt => self.password_salt, :password => self.password)
   end
 end
